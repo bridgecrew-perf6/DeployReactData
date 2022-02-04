@@ -1,0 +1,1 @@
+export const endPoint ='https://raw.githubusercontent.com/jennymontoya1001/endpointheroesjson/main/heroes.json';
