@@ -6,17 +6,17 @@ import CardComponets from "./CardComponets";
 class ListComponent extends Component {
   constructor() {
     super();
-    this.state = {
-      personajes: [],
+    this.state = { // state variable global
+      personajes: [], // estado inicial 
     };
   }
-  componentDidMount() {
+  componentDidMount() { // como Domcontent loaded
     this.getData();
   }
-  async getData() {
+  async getData() { // peticion get data
     const resp = await fetch(endPoint);
     const {results} = await resp.json();
-    this.setState({personajes:results});
+    this.setState({personajes:results}); // actualizar el estado con la peticion
     console.log(this.state.personajes);
   }
 
@@ -28,8 +28,8 @@ class ListComponent extends Component {
             {
                 this.state.personajes.map(per => (
                     <CardComponets
-                        key={per.id}
-                        movies={per}
+                        key={per.id} // key unique
+                        movies={per} // se le asigna para llamarlo en cards object
                     />
                 ))
             }

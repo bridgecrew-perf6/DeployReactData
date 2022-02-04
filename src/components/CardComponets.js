@@ -3,7 +3,7 @@ import {Col, Card} from 'react-bootstrap'
 
 export default class CardComponets extends Component {
   render() {
-    const {image, superhero,publisher}= this.props.movies;
+    const {image, superhero,publisher}= this.props.movies; // la prop de movies y desustructuracion
 
     return (
       <div>
